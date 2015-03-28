@@ -14,6 +14,12 @@
 		3B928C171ABDE957002BBF6B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B928C161ABDE957002BBF6B /* Images.xcassets */; };
 		3B928C1A1ABDE957002BBF6B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B928C181ABDE957002BBF6B /* LaunchScreen.xib */; };
 		3B928C261ABDE957002BBF6B /* MusicBluebTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B928C251ABDE957002BBF6B /* MusicBluebTests.m */; };
+		3B928C301ABDE993002BBF6B /* CoreAudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B928C2F1ABDE993002BBF6B /* CoreAudioKit.framework */; };
+		3B928C321ABDEA30002BBF6B /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B928C311ABDEA30002BBF6B /* CoreAudio.framework */; };
+		3B928C341ABDEA36002BBF6B /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B928C331ABDEA36002BBF6B /* CoreBluetooth.framework */; };
+		3BB527AF1AC0861000AA98CC /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BB527AE1AC0861000AA98CC /* CoreMIDI.framework */; };
+		3BB527B11AC2255300AA98CC /* libPods-MusicBlueb-MIKMIDI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BB527B01AC2255300AA98CC /* libPods-MusicBlueb-MIKMIDI.a */; };
+		749A099F9CDC8D71BEEF9B82 /* libPods-MusicBlueb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE069BE3A6C1CB605B121E26 /* libPods-MusicBlueb.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24BC5861D5CC6C15CB709DB8 /* Pods-MusicBlueb.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicBlueb.release.xcconfig"; path = "Pods/Target Support Files/Pods-MusicBlueb/Pods-MusicBlueb.release.xcconfig"; sourceTree = "<group>"; };
 		3B928C061ABDE957002BBF6B /* MusicBlueb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicBlueb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B928C0A1ABDE957002BBF6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B928C0B1ABDE957002BBF6B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +47,13 @@
 		3B928C1F1ABDE957002BBF6B /* MusicBluebTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicBluebTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B928C241ABDE957002BBF6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B928C251ABDE957002BBF6B /* MusicBluebTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusicBluebTests.m; sourceTree = "<group>"; };
+		3B928C2F1ABDE993002BBF6B /* CoreAudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioKit.framework; path = System/Library/Frameworks/CoreAudioKit.framework; sourceTree = SDKROOT; };
+		3B928C311ABDEA30002BBF6B /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		3B928C331ABDEA36002BBF6B /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		3BB527AE1AC0861000AA98CC /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
+		3BB527B01AC2255300AA98CC /* libPods-MusicBlueb-MIKMIDI.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-MusicBlueb-MIKMIDI.a"; path = "Pods/build/Debug-iphoneos/libPods-MusicBlueb-MIKMIDI.a"; sourceTree = "<group>"; };
+		CE069BE3A6C1CB605B121E26 /* libPods-MusicBlueb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MusicBlueb.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9B248AC21723BE9928F65CF /* Pods-MusicBlueb.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicBlueb.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MusicBlueb/Pods-MusicBlueb.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +61,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BB527B11AC2255300AA98CC /* libPods-MusicBlueb-MIKMIDI.a in Frameworks */,
+				3BB527AF1AC0861000AA98CC /* CoreMIDI.framework in Frameworks */,
+				3B928C341ABDEA36002BBF6B /* CoreBluetooth.framework in Frameworks */,
+				3B928C321ABDEA30002BBF6B /* CoreAudio.framework in Frameworks */,
+				3B928C301ABDE993002BBF6B /* CoreAudioKit.framework in Frameworks */,
+				749A099F9CDC8D71BEEF9B82 /* libPods-MusicBlueb.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +80,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21D8BE0211A1600DEB4E7617 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3BB527B01AC2255300AA98CC /* libPods-MusicBlueb-MIKMIDI.a */,
+				CE069BE3A6C1CB605B121E26 /* libPods-MusicBlueb.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3B928BFD1ABDE957002BBF6B = {
 			isa = PBXGroup;
 			children = (
+				3BB527AE1AC0861000AA98CC /* CoreMIDI.framework */,
+				3B928C331ABDEA36002BBF6B /* CoreBluetooth.framework */,
+				3B928C311ABDEA30002BBF6B /* CoreAudio.framework */,
+				3B928C2F1ABDE993002BBF6B /* CoreAudioKit.framework */,
 				3B928C081ABDE957002BBF6B /* MusicBlueb */,
 				3B928C221ABDE957002BBF6B /* MusicBluebTests */,
 				3B928C071ABDE957002BBF6B /* Products */,
+				ACAE987A2948A7736D875AE6 /* Pods */,
+				21D8BE0211A1600DEB4E7617 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +154,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		ACAE987A2948A7736D875AE6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E9B248AC21723BE9928F65CF /* Pods-MusicBlueb.debug.xcconfig */,
+				24BC5861D5CC6C15CB709DB8 /* Pods-MusicBlueb.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +170,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3B928C291ABDE957002BBF6B /* Build configuration list for PBXNativeTarget "MusicBlueb" */;
 			buildPhases = (
+				81E7C8C44869561DB8DA6D4A /* Check Pods Manifest.lock */,
 				3B928C021ABDE957002BBF6B /* Sources */,
 				3B928C031ABDE957002BBF6B /* Frameworks */,
 				3B928C041ABDE957002BBF6B /* Resources */,
+				65F0F3719ADD31870229A78A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,6 +259,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		65F0F3719ADD31870229A78A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MusicBlueb/Pods-MusicBlueb-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81E7C8C44869561DB8DA6D4A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3B928C021ABDE957002BBF6B /* Sources */ = {
@@ -343,20 +422,32 @@
 		};
 		3B928C2A1ABDE957002BBF6B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9B248AC21723BE9928F65CF /* Pods-MusicBlueb.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MusicBlueb/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		3B928C2B1ABDE957002BBF6B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24BC5861D5CC6C15CB709DB8 /* Pods-MusicBlueb.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MusicBlueb/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -414,6 +505,7 @@
 				3B928C2B1ABDE957002BBF6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3B928C2C1ABDE957002BBF6B /* Build configuration list for PBXNativeTarget "MusicBluebTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +514,7 @@
 				3B928C2E1ABDE957002BBF6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
