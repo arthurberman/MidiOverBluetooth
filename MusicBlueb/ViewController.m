@@ -91,7 +91,7 @@ int curnote = 0;
             NSLog(@"entities %@", entity.name);
             for (MIKMIDISourceEndpoint *source in entity.sources){
                 NSError *error = nil;
-                [MIKMIDIEndpointSynthesizer playerWithMIDISource:source];
+                NSLog(@"%@", source.name);
                 BOOL success = [manager connectInput:source error:&error eventHandler:^(MIKMIDISourceEndpoint *source, NSArray *commands) {
                     for (MIKMIDINoteOnCommand *command in commands) {
                         // Handle each command
