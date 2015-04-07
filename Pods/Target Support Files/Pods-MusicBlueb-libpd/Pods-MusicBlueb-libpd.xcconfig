@@ -1,0 +1,1 @@
+PODS_MUSICBLUEB_LIBPD_OTHER_LDFLAGS = -framework "Foundation"
