@@ -31,6 +31,7 @@ int curnote = 0;
 
 - (IBAction)configureCentral:(id)sender
 {
+    // central vc, allows transparent assignment of midi source as bluetooth input
     CABTMIDICentralViewController *vController = [CABTMIDICentralViewController new];
     
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:vController];
@@ -58,30 +59,30 @@ int curnote = 0;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)print:(id)sender {
+- (IBAction)print:(id)sender {                                      //sending outgoing midi messages to destination endpoints
     MIKMIDIDeviceManager *manager = [MIKMIDIDeviceManager sharedDeviceManager];
-    NSArray *availableMIDIDevices = [manager availableDevices];
+    NSArray *availableMIDIDevices = [manager availableDevices];                     //gets list of all available midi devices
     for (MIKMIDIDevice *device in availableMIDIDevices) {
         NSLog(@"name %@", device.name);
         for (MIKMIDIEntity *entity in device.entities) {
             NSLog(@"entities %@", entity.name);
             for (MIKMIDIDestinationEndpoint *destination in entity.destinations){
                 NSError *error = nil;
-                MIKMutableMIDINoteOnCommand *command = [[MIKMutableMIDINoteOnCommand alloc] init];
-                command.note = 60 + curnote++;
-                command.velocity = 64;
+                MIKMutableMIDINoteOnCommand *command = [[MIKMutableMIDINoteOnCommand alloc] init];          //note on command
+                command.note = 60 + curnote++;              // setting specific properties for message, actual note value and
+                command.velocity = 64;                      // volume
                 NSLog(@"note %lu", command.note);
-                NSArray *commands = [NSArray arrayWithObjects:command, nil];
-                [manager sendCommands:commands toEndpoint:destination error:&error];
+                NSArray *commands = [NSArray arrayWithObjects:command, nil];                   // NSArray of commands to send
+                [manager sendCommands:commands toEndpoint:destination error:&error];           // sending commands
                 NSLog(@"Destination");
                 NSLog(@"help");
                 
             }
         }
     }
-
+    
 }
-- (IBAction)activateReceipt:(id)sender {
+- (IBAction)activateReceipt:(id)sender {                             //receiving incoming midi messages from source endpoints
     
     MIKMIDIDeviceManager *manager = [MIKMIDIDeviceManager sharedDeviceManager];
     NSArray *availableMIDIDevices = [manager availableDevices];
@@ -89,11 +90,12 @@ int curnote = 0;
         NSLog(@"name %@", device.name);
         for (MIKMIDIEntity *entity in device.entities) {
             NSLog(@"entities %@", entity.name);
-            for (MIKMIDISourceEndpoint *source in entity.sources){
+            for (MIKMIDISourceEndpoint *source in entity.sources){                                     // getting all sources
                 NSError *error = nil;
-                NSLog(@"%@", source.name);
-                BOOL success = [manager connectInput:source error:&error eventHandler:^(MIKMIDISourceEndpoint *source, NSArray *commands) {
-                    for (MIKMIDINoteOnCommand *command in commands) {
+                [MIKMIDIEndpointSynthesizer playerWithMIDISource:source];                         //plays message from source
+                BOOL success = [manager connectInput:source error:&error eventHandler:^(MIKMIDISourceEndpoint *source, NSArray *commands) { // used to connect to an input/ source endpoint -- the success token eventually gets passed
+                    // to the disconnect method
+                    for (MIKMIDINoteOnCommand *command in commands) { // handler block
                         // Handle each command
                         
                         NSLog(@"%lu", (unsigned long)command.note);
@@ -109,6 +111,7 @@ int curnote = 0;
     }
 }
 - (IBAction)configureLocalPeripheral:(UIButton *)sender {
+    // local peripheral vc, allows transparent assignment of midi destination as bluetooth outlet
     CABTMIDILocalPeripheralViewController *vController = [[CABTMIDILocalPeripheralViewController alloc] init];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:vController];
     
